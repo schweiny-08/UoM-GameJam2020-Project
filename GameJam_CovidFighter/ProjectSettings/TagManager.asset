@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - LongRangeEnemy
   layers:
   - Default
   - TransparentFX
@@ -46,4 +47,7 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 134916949
+    locked: 0
+  - name: PlayerAndPeople
+    uniqueID: 2267875481
     locked: 0
