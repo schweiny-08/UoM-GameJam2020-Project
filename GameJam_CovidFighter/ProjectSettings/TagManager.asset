@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - LongRangeEnemy
+  - hurtEnemy
   layers:
   - Default
   - TransparentFX

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7010874375033551238}
   - component: {fileID: 7010874375033551237}
   m_Layer: 0
-  m_Name: LongRangePerson
+  m_Name: LongRangeEnemy
   m_TagString: LongRangeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
