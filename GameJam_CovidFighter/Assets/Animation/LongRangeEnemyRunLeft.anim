@@ -20,16 +20,30 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+<<<<<<< Updated upstream:GameJam_CovidFighter/Assets/Animation/LongRangeEnemyRunLeft.anim
       value: {fileID: -4330162285914872305, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
     - time: 0.21666667
       value: {fileID: 7153516900520864422, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
     - time: 0.41666666
       value: {fileID: -4330162285914872305, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
+=======
+      value: {fileID: 2922002745784567783, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+    - time: 0.083333336
+      value: {fileID: 2788469884393964521, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+    - time: 0.16666667
+      value: {fileID: -1289107693796282285, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+    - time: 0.25
+      value: {fileID: 3767618613167722792, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+>>>>>>> Stashed changes:GameJam_CovidFighter/Assets/Animation/EnemyAnims/LongRangedGuyEnemyIdle.anim
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
+<<<<<<< Updated upstream:GameJam_CovidFighter/Assets/Animation/LongRangeEnemyRunLeft.anim
   m_SampleRate: 60
+=======
+  m_SampleRate: 12
+>>>>>>> Stashed changes:GameJam_CovidFighter/Assets/Animation/EnemyAnims/LongRangedGuyEnemyIdle.anim
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -44,15 +58,26 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
+<<<<<<< Updated upstream:GameJam_CovidFighter/Assets/Animation/LongRangeEnemyRunLeft.anim
     - {fileID: -4330162285914872305, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
     - {fileID: 7153516900520864422, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
     - {fileID: -4330162285914872305, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
+=======
+    - {fileID: 2922002745784567783, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+    - {fileID: 2788469884393964521, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+    - {fileID: -1289107693796282285, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+    - {fileID: 3767618613167722792, guid: da39cc92596f3bd46ae00824adc2a101, type: 3}
+>>>>>>> Stashed changes:GameJam_CovidFighter/Assets/Animation/EnemyAnims/LongRangedGuyEnemyIdle.anim
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
+<<<<<<< Updated upstream:GameJam_CovidFighter/Assets/Animation/LongRangeEnemyRunLeft.anim
     m_StopTime: 0.43333334
+=======
+    m_StopTime: 0.33333334
+>>>>>>> Stashed changes:GameJam_CovidFighter/Assets/Animation/EnemyAnims/LongRangedGuyEnemyIdle.anim
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
