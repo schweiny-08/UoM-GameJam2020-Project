@@ -7,7 +7,7 @@ public class DisinfectantScript : MonoBehaviour
         void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Wall")
             Destroy(gameObject);
-        else if(col.gameObject.tag == "Enemy"){
+        else if(col.gameObject.tag == "LongRangeEnemy"){
             Debug.Log("ENEMY HIT");
             Destroy(gameObject);
         }
