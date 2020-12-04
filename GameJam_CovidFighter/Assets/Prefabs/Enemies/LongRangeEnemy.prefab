@@ -256,7 +256,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2027091815
   m_SortingOrder: 0
   m_TargetDisplay: 0
 --- !u!114 &17215475815321503
@@ -311,7 +311,7 @@ GameObject:
   - component: {fileID: 7010874375033551290}
   - component: {fileID: 7010874375033551289}
   - component: {fileID: 7010874375033551238}
-  - component: {fileID: 7010874375033551237}
+  - component: {fileID: 7112426034777732834}
   m_Layer: 0
   m_Name: LongRangeEnemy
   m_TagString: LongRangeEnemy
@@ -328,7 +328,7 @@ Transform:
   m_GameObject: {fileID: 7010874375033551288}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 3.12, y: -2.38, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.28664, y: 0.28664, z: 0.28664}
   m_Children:
   - {fileID: 3670097385621040957}
   m_Father: {fileID: 0}
@@ -451,7 +451,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7010874375033551237
+--- !u!114 &7112426034777732834
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,13 +460,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7010874375033551288}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6ed4396f7205ab4688fb2daa353aec1, type: 3}
+  m_Script: {fileID: 11500000, guid: a3ba10c8bb41a73489650451bbfd2728, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  shootDistance: 10
-  followDistance: 30
-  runDistance: 5
+  shootDistance: 4
+  followDistance: 6
+  runDistance: 3
   health: 3
   curedPersonPrefabVarient: {fileID: 0}
   healthSlider: {fileID: 3666745308016856155}
