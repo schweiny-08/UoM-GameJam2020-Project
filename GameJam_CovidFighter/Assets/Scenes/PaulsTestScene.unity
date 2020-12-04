@@ -213,6 +213,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5700731303724369160, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7010874375033551236, guid: deb208b251337af41819a09bab484d84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4667065
@@ -370,6 +374,10 @@ PrefabInstance:
     - target: {fileID: 1115562721409683073, guid: 1b6cf83f86f964c44ab2087458d9142c, type: 3}
       propertyPath: m_Name
       value: EnemyHurtingObject
+      objectReference: {fileID: 0}
+    - target: {fileID: 1115562721409683073, guid: 1b6cf83f86f964c44ab2087458d9142c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1115562721409683075, guid: 1b6cf83f86f964c44ab2087458d9142c, type: 3}
       propertyPath: m_LocalPosition.x

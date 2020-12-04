@@ -40,14 +40,13 @@ public class Follow : StateMachineBehaviour
             animator.SetBool("RunAway", false);
         }
 
-
         //if withing follow range but not shoot range than follow
         if ((distance > followDistance))
         {
             animator.SetBool("Moving", false);
             animator.SetBool("MovingLeft", false);
         }
-        else if ((distance <= shootDistance) && (distance > runDistance))
+        else if ((distance <= shootDistance) && (distance >= runDistance))
         {
             animator.SetBool("Sneeze", true);
             animator.SetBool("Moving", false);
@@ -57,7 +56,16 @@ public class Follow : StateMachineBehaviour
         //check if need to move left
         if (thisEnemy.transform.position.x > player.transform.position.x)
         {
-            animator.SetBool("MovingLeft", true);
+            //animator.SetBool("MovingLeft", true);
+            //flip the enemy to look to the left
+            Vector3 flip = new Vector3(-1, 1, 1);
+            thisEnemy.transform.localScale = flip;
+        }
+        else
+        {
+            //flip the enemy to look to the right
+            Vector3 flip = new Vector3(1, 1, 1);
+            thisEnemy.transform.localScale = flip;
         }
     }
 }
