@@ -15,6 +15,9 @@ public class PlayerMovement : MonoBehaviour
     //Variables for player rotate with mouse
     private Transform playerPos;
     Vector2 mousePos;
+    public float angle;
+
+    private Transform firePoint;
     
     // Start is called before the first frame update
     void Start()
@@ -26,6 +29,8 @@ public class PlayerMovement : MonoBehaviour
 
         //Player rotate with mouse
         playerPos = GetComponent<Transform>();
+
+        firePoint = GameObject.Find("FirePoint").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -34,12 +39,19 @@ public class PlayerMovement : MonoBehaviour
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
+        Debug.DrawRay(firePoint.position, firePoint.up, Color.blue);
+
         Vector2 mouseDir = mousePos - rb.position;
-        float angle = ((Mathf.Atan2(mouseDir.y, mouseDir.x) / Mathf.PI) * 180f) - 135f;//* Mathf.Rad2Deg;
+        angle = ((Mathf.Atan2(mouseDir.y, mouseDir.x) / Mathf.PI) * 180f) - 135f;//* Mathf.Rad2Deg;
         if (angle < 0)
             angle += 360f;
         
         //Debug.Log(angle);
+
+        //Rotates the fire point according to the mouse position
+        firePoint.rotation = Quaternion.Euler(0,0, angle+45f);
+        Debug.DrawRay(firePoint.position, firePoint.up, Color.blue);
+
 
         if (angle >= 0f && angle <= 90f) {
             //Debug.Log("LEFT");
@@ -47,24 +59,36 @@ public class PlayerMovement : MonoBehaviour
             anim.SetBool("isLeft", true);
             anim.SetBool("isRight", false);
             anim.SetBool("isDown", false);
+
+            firePoint.position = new Vector2((playerPos.position.x-0.1f), firePoint.position.y);//Changes firepoint position according to bottle on animation
+            
         } else if (angle > 90F && angle <= 180F) {
             //Debug.Log("DOWN");
             anim.SetBool("isUp", false);
             anim.SetBool("isLeft", false);
             anim.SetBool("isRight", false);
             anim.SetBool("isDown", true);
+
+            firePoint.position = new Vector2((playerPos.position.x-0.15f), firePoint.position.y);//Changes firepoint position according to bottle on animation
+
         } else if (angle > 180f && angle <= 270f) {
             //Debug.Log("RIGHT");
             anim.SetBool("isUp", false);
             anim.SetBool("isLeft", false);
             anim.SetBool("isRight", true);
             anim.SetBool("isDown", false);
+
+            firePoint.position = new Vector2((playerPos.position.x + 0.1f), firePoint.position.y);//Changes firepoint position according to bottle on animation
+
         } else if (angle > 270f && angle <= 359.999) {
             //Debug.Log("UP");
             anim.SetBool("isUp", true);
             anim.SetBool("isLeft", false);
             anim.SetBool("isRight", false);
             anim.SetBool("isDown", false);
+        
+            firePoint.position = new Vector2((playerPos.position.x + 0.15f), firePoint.position.y);//Changes firepoint position according to bottle on animation
+           
         }
     }
 
