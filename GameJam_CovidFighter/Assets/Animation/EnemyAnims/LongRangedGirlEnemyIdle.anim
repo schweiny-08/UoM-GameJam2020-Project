@@ -20,9 +20,6 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-<<<<<<< Updated upstream:GameJam_CovidFighter/Assets/Animation/LongRangeEnemySneeze.anim
-      value: {fileID: 7721007330168298437, guid: 0f2d3d11eec88ee45a3ed0202c5889df, type: 3}
-=======
       value: {fileID: 800439376800426090, guid: 8f5d8fc53d49bc3428d56d3cf42ed404, type: 3}
     - time: 0.083333336
       value: {fileID: -8607786852521661682, guid: 8f5d8fc53d49bc3428d56d3cf42ed404, type: 3}
@@ -30,16 +27,11 @@ AnimationClip:
       value: {fileID: -2698366442438607477, guid: 8f5d8fc53d49bc3428d56d3cf42ed404, type: 3}
     - time: 0.25
       value: {fileID: 2293013003974729821, guid: 8f5d8fc53d49bc3428d56d3cf42ed404, type: 3}
->>>>>>> Stashed changes:GameJam_CovidFighter/Assets/Animation/EnemyAnims/LongRangedGirlEnemyIdle.anim
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
-<<<<<<< Updated upstream:GameJam_CovidFighter/Assets/Animation/LongRangeEnemySneeze.anim
-  m_SampleRate: 60
-=======
   m_SampleRate: 12
->>>>>>> Stashed changes:GameJam_CovidFighter/Assets/Animation/EnemyAnims/LongRangedGirlEnemyIdle.anim
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}

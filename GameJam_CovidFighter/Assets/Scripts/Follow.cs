@@ -5,11 +5,13 @@ using UnityEngine;
 public class Follow : StateMachineBehaviour
 {
     private float speed;
-    private float shootDistance;
-    private float followDistance;
-    private float runDistance;
+    private float shootDistance = 4f;
+    private float followDistance = 6f;
+    private float runDistance = 2.5f;
     private GameObject player;
     private GameObject thisEnemy;
+
+    public float scale = 0.3f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -58,13 +60,13 @@ public class Follow : StateMachineBehaviour
         {
             //animator.SetBool("MovingLeft", true);
             //flip the enemy to look to the left
-            Vector3 flip = new Vector3(-1, 1, 1);
+            Vector3 flip = new Vector3(-scale, scale, scale);
             thisEnemy.transform.localScale = flip;
         }
         else
         {
             //flip the enemy to look to the right
-            Vector3 flip = new Vector3(1, 1, 1);
+            Vector3 flip = new Vector3(scale, scale, scale);
             thisEnemy.transform.localScale = flip;
         }
     }
