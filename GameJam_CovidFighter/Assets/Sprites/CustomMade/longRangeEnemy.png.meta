@@ -1,0 +1,244 @@
+fileFormatVersion: 2
+guid: 0f2d3d11eec88ee45a3ed0202c5889df
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6829999371886123548
+    second: longRangeEnemy_0
+  - first:
+      213: -4625823695930753496
+    second: longRangeEnemy_1
+  - first:
+      213: -4852773965801575440
+    second: longRangeEnemy_2
+  - first:
+      213: -3469505090253433313
+    second: longRangeEnemy_3
+  - first:
+      213: 953067006593390732
+    second: longRangeEnemy_4
+  - first:
+      213: -8775891400744627468
+    second: longRangeEnemy_5
+  - first:
+      213: -4330162285914872305
+    second: longRangeEnemy_6
+  - first:
+      213: 7153516900520864422
+    second: longRangeEnemy_7
+  - first:
+      213: 7721007330168298437
+    second: longRangeEnemy_8
+  - first:
+      213: -2508816579710742510
+    second: longRangeEnemy_9
+  - first:
+      213: 7420978799690111637
+    second: longRangeEnemy_10
+  - first:
+      213: 8061210345650880872
+    second: longRangeEnemy_11
+  - first:
+      213: -8802388001725143200
+    second: longRangeEnemy_12
+  - first:
+      213: 4804623441916318136
+    second: longRangeEnemy_13
+  - first:
+      213: -1655067704267949191
+    second: longRangeEnemy_14
+  - first:
+      213: -8857162721526136917
+    second: longRangeEnemy_15
+  - first:
+      213: -4363378652057679557
+    second: longRangeEnemy_16
+  - first:
+      213: -5366817112973236883
+    second: longRangeEnemy_17
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: longRangeEnemy_6
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 402
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f062048d75c28e3c0800000000000000
+      internalID: -4330162285914872305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: longRangeEnemy_7
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 402
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aaac4658b5664360800000000000000
+      internalID: 7153516900520864422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: longRangeEnemy_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 251
+        width: 14
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf3a999e69051580800000000000000
+      internalID: -8857162721526136917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: longRangeEnemy_16
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 251
+        width: 17
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39449feb3a2273c0800000000000000
+      internalID: -4363378652057679557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
