@@ -4,9 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - SafeZone
   - LongRangeEnemy
   - hurtEnemy
   - Wall
+
   layers:
   - Default
   - TransparentFX
