@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - SafeZone
+  - LongRangeEnemy
+  - hurtEnemy
+  - Wall
+
   layers:
   - Default
   - TransparentFX
@@ -14,8 +18,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Player
+  - Projectile
   - 
   - 
   - 
@@ -47,4 +51,7 @@ TagManager:
     locked: 0
   - name: Wall
     uniqueID: 134916949
+    locked: 0
+  - name: PlayerAndPeople
+    uniqueID: 2267875481
     locked: 0
