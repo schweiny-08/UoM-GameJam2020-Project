@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SafeZoneManager : MonoBehaviour
 {
+
+    public PlayerHealth playerhealth;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +23,17 @@ public class SafeZoneManager : MonoBehaviour
         if(col.gameObject.tag == "Enemy")
         {
             //some script to rotate enemy
+        }
+
+        if(col.gameObject.tag == "Player")
+        {
+            if (playerhealth.lowhealth)
+            {
+                playerhealth.lowhealth = false;
+                playerhealth.timeTaken = 0;
+                playerhealth.currentHealth = playerhealth.maxHealth;
+                Debug.Log("Health Restored");
+            }
         }
     }
 }
