@@ -18,6 +18,9 @@ public class PlayerMovement : MonoBehaviour
     public float angle;
 
     private Transform firePoint;
+
+    //public AudioClip cityWalk;
+    private AudioSource audio;
     
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,8 @@ public class PlayerMovement : MonoBehaviour
         playerPos = GetComponent<Transform>();
 
         firePoint = GameObject.Find("FirePoint").GetComponent<Transform>();
+
+        audio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -144,6 +149,13 @@ public class PlayerMovement : MonoBehaviour
                 rb.velocity = new Vector2(0, 0);
                 anim.SetBool("isWalking", false);
             }
+
+            if(anim.GetBool("isWalking")){
+                if(!audio.isPlaying)
+                    audio.Play();
+            }
+            else
+                audio.Stop();
         }
     }
 }
