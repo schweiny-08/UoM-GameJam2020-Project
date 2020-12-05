@@ -29,6 +29,7 @@ public class LongRangePersonStats : MonoBehaviour
 
     }
 
+    /*
     private void OnCollisionEnter2D(Collision2D collision)
 {
         if (collision.gameObject.tag == "hurtEnemy")
@@ -51,7 +52,26 @@ public class LongRangePersonStats : MonoBehaviour
             }
         }
     }
+    */
 
+    public void CharacterDamage(int damageTaken){
+        health -= damageTaken;
+        healthSlider.value = health / maxhealth;
+        if (health == 0)
+        {
+            //diabling sprite and collisions now and waiting 2 seconds to destroy object to give time to play death effects/ sound effects
+            this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+            this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            healthSlider.GetComponentInParent<Canvas>().enabled = false;
+            //Destroy(healthSlider);
+
+            //spawn one of the normal people depending on the prefab given
+            Instantiate(curedPersonPrefabVarient, this.transform.position, Quaternion.identity);
+
+            //wait to destroy
+            StartCoroutine(DestroyObjectAfterWait(0.5f));
+        }
+    }
 
     IEnumerator DestroyObjectAfterWait(float timeTillDestroy)
     {
