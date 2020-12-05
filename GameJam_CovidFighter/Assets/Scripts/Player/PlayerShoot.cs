@@ -13,7 +13,7 @@ public class PlayerShoot : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        firePoint = GameObject.Find("FirePoint").GetComponent<Transform>();
+        firePoint = gameObject.transform.Find("FirePoint").GetComponent<Transform>();
     }
 
     // Update is called once per frame
@@ -33,6 +33,6 @@ public class PlayerShoot : MonoBehaviour
     void Shoot(float angle){
         GameObject drop = Instantiate(projectile, firePoint.position, Quaternion.Euler(0f, 0f, angle-90f));//Quaternion.Inverse(Quaternion.Euler(0f, 0f, angle-90f)));
         drop.GetComponent<Rigidbody2D>().velocity = firePoint.up * projectileSpeed;
-        Rigidbody2D rb = drop.GetComponent<Rigidbody2D>();
+        //Rigidbody2D rb = drop.GetComponent<Rigidbody2D>();
     }
 }

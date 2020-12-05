@@ -298,6 +298,36 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!1 &5566718560168547521
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 9119339477102697955}
+  m_Layer: 0
+  m_Name: EnemyFirePoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &9119339477102697955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5566718560168547521}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.11512696, y: 1.03, z: -4.592142}
+  m_LocalScale: {x: 3.4886966, y: 3.4886966, z: 3.4886966}
+  m_Children: []
+  m_Father: {fileID: 7010874375033551236}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7010874375033551288
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +342,7 @@ GameObject:
   - component: {fileID: 7010874375033551289}
   - component: {fileID: 7010874375033551238}
   - component: {fileID: 7112426034777732834}
+  - component: {fileID: 1500576613}
   m_Layer: 0
   m_Name: LongRangeEnemy
   m_TagString: LongRangeEnemy
@@ -331,6 +362,7 @@ Transform:
   m_LocalScale: {x: 0.28664, y: 0.28664, z: 0.28664}
   m_Children:
   - {fileID: 3670097385621040957}
+  - {fileID: 9119339477102697955}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -470,6 +502,21 @@ MonoBehaviour:
   health: 3
   curedPersonPrefabVarient: {fileID: 0}
   healthSlider: {fileID: 3666745308016856155}
+--- !u!114 &1500576613
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7010874375033551288}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9bbcf0212d289c469aa1d3aacb46c5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  projectile: {fileID: 3665060394416258257, guid: 19d23f7b4da32fa4fab6b3faa2390379, type: 3}
+  projectileSpeed: 4
+  startShootDelay: 2
 --- !u!1 &7053301341968807251
 GameObject:
   m_ObjectHideFlags: 0
