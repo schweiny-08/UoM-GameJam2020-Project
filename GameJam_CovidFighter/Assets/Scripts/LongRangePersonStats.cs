@@ -66,16 +66,21 @@ public class LongRangePersonStats : MonoBehaviour
             //Destroy(healthSlider);
 
             //spawn one of the normal people depending on the prefab given
-            Instantiate(curedPersonPrefabVarient, this.transform.position, Quaternion.identity);
+            //Instantiate(curedPersonPrefabVarient, this.transform.position, Quaternion.identity);
 
+
+            //Destroy(gameObject.transform.Find("FirePoint"));
+            Destroy(this.gameObject);
             //wait to destroy
-            StartCoroutine(DestroyObjectAfterWait(0.5f));
+            //StartCoroutine(DestroyObjectAfterWait(0.5f));
         }
     }
 
+    /*
     IEnumerator DestroyObjectAfterWait(float timeTillDestroy)
     {
         yield return new WaitForSeconds(timeTillDestroy);
         Destroy(gameObject);
     }
+    */
 }
