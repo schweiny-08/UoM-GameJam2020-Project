@@ -2,16 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Follow : StateMachineBehaviour
+public class FollowShortRangeEnemy : StateMachineBehaviour
 {
+
     private float speed;
-    private float shootDistance = 4f;
     private float followDistance = 6f;
-    private float runDistance = 2.5f;
     private GameObject player;
     private GameObject thisEnemy;
 
     public float scale = 0.3f;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -19,10 +19,8 @@ public class Follow : StateMachineBehaviour
         thisEnemy = animator.gameObject;
         player = GameObject.FindWithTag("Player");
 
-        speed = thisEnemy.GetComponent<LongRangePersonStats>().speed;
-        shootDistance = thisEnemy.GetComponent<LongRangePersonStats>().shootDistance;
-        followDistance = thisEnemy.GetComponent<LongRangePersonStats>().followDistance;
-        runDistance = thisEnemy.GetComponent<LongRangePersonStats>().runDistance;
+        speed = thisEnemy.GetComponent<ShortRangePersonStats>().speed;
+        followDistance = thisEnemy.GetComponent<ShortRangePersonStats>().followDistance;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -30,30 +28,14 @@ public class Follow : StateMachineBehaviour
     {
         float distance = Vector3.Distance(thisEnemy.transform.position, player.transform.position);
 
-        //checking if it should run away or towards player
-        //move away from player
-        if (distance <= runDistance)
-        {
-            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, -1 * speed * Time.deltaTime);
-        }
-        //move towards player
-        else
+        //is withing follow range then move towards player
+        if (distance <= followDistance)
         {
             thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, speed * Time.deltaTime);
-            animator.SetBool("RunAway", false);
         }
-
-        //if withing follow range but not shoot range than follow
-        if ((distance > followDistance))
+        else
         {
-            animator.SetBool("Moving", false);
-            animator.SetBool("MovingLeft", false);
-        }
-        else if ((distance <= shootDistance) && (distance >= runDistance))
-        {
-            animator.SetBool("Sneeze", true);
-            animator.SetBool("Moving", false);
-            animator.SetBool("MovingLeft", false);
+            animator.SetBool("PlayerSeen", false);
         }
 
         //check if need to move left
@@ -71,4 +53,23 @@ public class Follow : StateMachineBehaviour
             thisEnemy.transform.localScale = flip;
         }
     }
+
+
+    // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
+    //override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    
+    //}
+
+    // OnStateMove is called right after Animator.OnAnimatorMove()
+    //override public void OnStateMove(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    // Implement code that processes and affects root motion
+    //}
+
+    // OnStateIK is called right after Animator.OnAnimatorIK()
+    //override public void OnStateIK(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    //{
+    //    // Implement code that sets up animation IK (inverse kinematics)
+    //}
 }
