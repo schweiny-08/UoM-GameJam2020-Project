@@ -48,15 +48,17 @@ public class PlayerHealth : MonoBehaviour
     {
         currentHealth += healthIncrease;
 
+        /*
         if(currentHealth >= maxHealth)
         {
             currentHealth = maxHealth;
         }
+        */
     }
 
     public void OnMaxHealthIncreased (int newMaxhealth)
     {
         maxHealth = newMaxhealth;
-        //currentHealth = maxHealth;
+        currentHealth = maxHealth;
     }
 }

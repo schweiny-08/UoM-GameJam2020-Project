@@ -405,7 +405,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 144454195
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 3767618613167722792, guid: d14644dba1d772943908ed1da837b481, type: 3}
   m_Color: {r: 0.41459063, g: 1, b: 0.41037738, a: 1}
   m_FlipX: 0
@@ -498,7 +498,7 @@ MonoBehaviour:
   speed: 3
   shootDistance: 4
   followDistance: 6
-  runDistance: 3
+  runDistance: 2
   health: 3
   curedPersonPrefabVarient: {fileID: 0}
   healthSlider: {fileID: 3666745308016856155}

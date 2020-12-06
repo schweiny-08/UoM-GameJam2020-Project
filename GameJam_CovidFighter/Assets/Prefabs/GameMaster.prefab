@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f96c7d443485a4f9827294c3bcba28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 5
+  maxHealth: 7
   currentHealth: 0
   timeLimit: 30
   lowhealth: 0
