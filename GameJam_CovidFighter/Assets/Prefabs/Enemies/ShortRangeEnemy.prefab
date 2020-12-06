@@ -4842,8 +4842,8 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -81492227
-  m_SortingLayer: 0
+  m_SortingLayerID: 144454195
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_RenderMode: 0
   m_SortMode: 0
@@ -5021,7 +5021,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 144454195
   m_SortingLayer: 2
-  m_SortingOrder: 0
+  m_SortingOrder: 3
   m_Sprite: {fileID: 800439376800426090, guid: 69d345a37a57ded48b1228dfa71d023e, type: 3}
   m_Color: {r: 0.41459063, g: 1, b: 0.41037738, a: 1}
   m_FlipX: 0
@@ -5112,7 +5112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  followDistance: 30
+  followDistance: 10
   health: 3
   attackCooldown: 2
   curedPersonPrefabVarient: {fileID: 0}

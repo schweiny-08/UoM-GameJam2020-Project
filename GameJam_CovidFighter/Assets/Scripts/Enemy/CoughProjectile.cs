@@ -10,8 +10,12 @@ public class CoughProjectile : MonoBehaviour
      private Transform player;
      private Vector2 target;
 
+    private PlayerHealth playerHealth;
+
     void Start(){
         player = GameObject.FindWithTag("Player").transform;
+
+        playerHealth = GameObject.Find("GameMaster").GetComponent<PlayerHealth>();
 
         target = player.position;
     }
@@ -27,7 +31,7 @@ public class CoughProjectile : MonoBehaviour
             Destroy(gameObject);
         else if(col.gameObject.tag == "Player"){
             Debug.Log("PLAYER HIT");
-
+            playerHealth.OnDamageTaken(damage);
             Destroy(gameObject); //Destroying the drop before enemy is destroyed (drop wont destroy if done after)
 
             //Hit Player

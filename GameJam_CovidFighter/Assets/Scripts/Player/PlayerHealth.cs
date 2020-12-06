@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class PlayerHealth : MonoBehaviour
 {
 
-    public float maxHealth = 10;
-    public float currentHealth;
+    public int maxHealth = 5;
+    public int currentHealth;
     public float timeLimit = 30;
     public bool lowhealth = false;
     public float timeTaken;
@@ -38,7 +38,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            lowhealth = true;
+            //lowhealth = true;
             Debug.Log("VERY LOW HEALTH. RETURN TO SAFE ZONE WITHIN " + timeLimit + " SECONDS");
 
         }
