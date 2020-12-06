@@ -9,6 +9,7 @@ TagManager:
   - hurtEnemy
   - Wall
   - MeleeEnemy
+  - Heal
   layers:
   - Default
   - TransparentFX
@@ -23,7 +24,7 @@ TagManager:
   - Projectile
   - EnemyProjectile
   - Wall
-  - 
+  - HealingItem
   - 
   - 
   - 
@@ -57,4 +58,7 @@ TagManager:
     locked: 0
   - name: EnemyProjectiles
     uniqueID: 848937935
+    locked: 0
+  - name: HealingItem
+    uniqueID: 3710531591
     locked: 0
