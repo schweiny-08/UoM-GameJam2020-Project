@@ -17,6 +17,12 @@ public class DisinfectantScript : MonoBehaviour
 
             col.gameObject.GetComponent<LongRangePersonStats>().CharacterDamage(damage);
             
+        }else if(col.gameObject.tag == "MeleeEnemy"){
+            Debug.Log("ENEMY HIT");
+
+            Destroy(gameObject); //Destroying the drop before enemy is destroyed (drop wont destroy if done after)
+
+            col.gameObject.GetComponent<ShortRangePersonStats>().CharacterDamage(damage);
         }
     }
 }

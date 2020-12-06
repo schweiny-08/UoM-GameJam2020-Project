@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5815052790926205007}
   - component: {fileID: 6837339950003813108}
   - component: {fileID: 802119948245397487}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: DisenfectantShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}

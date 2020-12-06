@@ -31,6 +31,7 @@ public class ShortRangePersonStats : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        /*
         if (collision.gameObject.tag == "hurtEnemy")
         {
             health--;
@@ -50,14 +51,34 @@ public class ShortRangePersonStats : MonoBehaviour
                 StartCoroutine(DestroyObjectAfterWait(2f));
             }     
         }
-
+        */
 
         if (collision.gameObject.tag == "Player")
         {
             this.GetComponent<Animator>().SetBool("WaitAfterAttack", true);
             StartCoroutine(AttackCooldown(attackCooldown));
             attackParticles.Play();
+            Debug.Log("PLAYER HIT");
         }
+    }
+
+    public void CharacterDamage(int damageTaken){
+        health -= damageTaken;
+            healthSlider.value = health / maxhealth;
+            if (health == 0)
+            {
+                //diabling sprite and collisions now and waiting 2 seconds to destroy object to give time to play death effects/ sound effects
+                this.gameObject.GetComponent<SpriteRenderer>().enabled = false;
+                this.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+                healthSlider.GetComponentInParent<Canvas>().enabled = false;
+                //Destroy(healthSlider);
+
+                //spawn one of the normal people depending on the prefab given
+                Instantiate(curedPersonPrefabVarient, this.transform.position, Quaternion.identity);
+
+                //wait to destroy
+                StartCoroutine(DestroyObjectAfterWait(2f));
+            }     
     }
 
 
