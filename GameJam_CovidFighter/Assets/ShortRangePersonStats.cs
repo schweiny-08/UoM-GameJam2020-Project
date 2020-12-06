@@ -16,11 +16,17 @@ public class ShortRangePersonStats : MonoBehaviour
 
     private float maxhealth;
 
+    private int damage;
+    private PlayerHealth playerHealth;
+
     // Start is called before the first frame update
     void Start()
     {
         maxhealth = health;
         healthSlider.value = health / maxhealth;
+
+        playerHealth = GameObject.Find("GameMaster").GetComponent<PlayerHealth>();
+        damage = 1;
     }
 
     // Update is called once per frame
@@ -58,6 +64,9 @@ public class ShortRangePersonStats : MonoBehaviour
             this.GetComponent<Animator>().SetBool("WaitAfterAttack", true);
             StartCoroutine(AttackCooldown(attackCooldown));
             attackParticles.Play();
+
+            playerHealth.OnDamageTaken(damage);
+
             Debug.Log("PLAYER HIT");
         }
     }

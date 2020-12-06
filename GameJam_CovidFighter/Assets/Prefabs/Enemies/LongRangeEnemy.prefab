@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6074016724765727040}
   - component: {fileID: 3666745308016856155}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6288119208062019082}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Handle Slide Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 2004323700712050940}
   - component: {fileID: 2528815813220740409}
   - component: {fileID: 7235803954223546461}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 7991648698241544192}
   - component: {fileID: 17215475815321503}
   - component: {fileID: 9118389088386977585}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -307,7 +307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9119339477102697955}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: EnemyFirePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -343,7 +343,7 @@ GameObject:
   - component: {fileID: 7010874375033551238}
   - component: {fileID: 7112426034777732834}
   - component: {fileID: 1500576613}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LongRangeEnemy
   m_TagString: LongRangeEnemy
   m_Icon: {fileID: 0}
@@ -525,7 +525,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7271029609538144321}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill Area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -563,7 +563,7 @@ GameObject:
   - component: {fileID: 5700731303724369160}
   - component: {fileID: 4225755154776139262}
   - component: {fileID: 4253910234795882046}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Fill
   m_TagString: Untagged
   m_Icon: {fileID: 0}

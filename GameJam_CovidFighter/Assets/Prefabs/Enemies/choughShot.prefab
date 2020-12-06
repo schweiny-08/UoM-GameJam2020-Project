@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3665060394416258255}
   - component: {fileID: 3665060394416258254}
   - component: {fileID: 3855976480920795529}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: choughShot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
