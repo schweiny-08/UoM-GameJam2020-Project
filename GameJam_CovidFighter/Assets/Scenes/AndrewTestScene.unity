@@ -15984,6 +15984,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 573180191560326548, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2197255492836910302, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2565491165033698037, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 2763864997753357240, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5566718560168547521, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5700731303724369160, guid: deb208b251337af41819a09bab484d84, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -16036,6 +16056,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LongRangeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 7010874375033551288, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7010874375033551291, guid: deb208b251337af41819a09bab484d84, type: 3}
       propertyPath: m_SortingLayerID
       value: 144454195
@@ -16048,9 +16072,17 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 7053301341968807251, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 7112426034777732834, guid: deb208b251337af41819a09bab484d84, type: 3}
       propertyPath: runDistance
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8119585291313238054, guid: deb208b251337af41819a09bab484d84, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: deb208b251337af41819a09bab484d84, type: 3}
@@ -16130,6 +16162,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: ShortRangeEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 1896668782631520896, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896668782631520896, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
+      propertyPath: m_TagString
+      value: MeleeEnemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896668782631520898, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1896668782631520899, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 1896668782631520956, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.2579436
@@ -16177,6 +16225,10 @@ PrefabInstance:
     - target: {fileID: 3748371232037320240, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9222463283231238977, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
+      propertyPath: followDistance
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}
