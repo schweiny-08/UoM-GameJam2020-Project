@@ -50,7 +50,13 @@ public class PlayerHealth : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            lowhealth = true;
+            if(SceneManager.GetActiveScene().name != "BossScene")
+                lowhealth = true;
+            else{
+                StartCoroutine(InfectedPlayer());
+                //Load current scene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
             Debug.Log("VERY LOW HEALTH. RETURN TO SAFE ZONE WITHIN " + timeLimit + " SECONDS");
 
         }
