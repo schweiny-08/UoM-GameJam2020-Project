@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LongRangePersonStats : MonoBehaviour
 {
@@ -65,8 +66,12 @@ public class LongRangePersonStats : MonoBehaviour
             healthSlider.GetComponentInParent<Canvas>().enabled = false;
             //Destroy(healthSlider);
 
-            //spawn one of the normal people depending on the prefab given
-            //Instantiate(curedPersonPrefabVarient, this.transform.position, Quaternion.identity);
+            //spawn one of the normal people depending on the prefab given 
+            //doesnt happen in the boss fight
+            if (SceneManager.GetActiveScene().name != "BossScene")
+            {
+                Instantiate(curedPersonPrefabVarient, this.transform.position, Quaternion.identity);
+            }
 
 
             //Destroy(gameObject.transform.Find("FirePoint"));
