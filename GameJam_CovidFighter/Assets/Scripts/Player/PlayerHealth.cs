@@ -12,6 +12,9 @@ public class PlayerHealth : MonoBehaviour
     public bool lowhealth = false;
     public float timeTaken;
 
+    public float playerSpeed = 6f;
+    public int attackDamage = 1;
+
     private GUI gui;
 
     // Start is called before the first frame update

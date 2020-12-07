@@ -55,7 +55,7 @@ public class MenuScript : MonoBehaviour
         StartCoroutine(disableOptionsAfter(waitTime));
     }
 
-    //loads the scene after the given time
+    //disables the options menu after a given time
     IEnumerator disableOptionsAfter(float waitTime)
     {
 
