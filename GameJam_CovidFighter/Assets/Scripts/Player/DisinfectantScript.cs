@@ -29,6 +29,11 @@ public class DisinfectantScript : MonoBehaviour
             Destroy(gameObject); //Destroying the drop before enemy is destroyed (drop wont destroy if done after)
 
             col.gameObject.GetComponent<ShortRangePersonStats>().CharacterDamage(damage);
+        }else if(col.gameObject.name == "CovidBoss"){
+            Debug.Log("BossHit");
+
+            col.gameObject.GetComponent<BossHealth>().TakeDamage(damage);
+            Destroy(gameObject);
         }
-    }
+     }
 }

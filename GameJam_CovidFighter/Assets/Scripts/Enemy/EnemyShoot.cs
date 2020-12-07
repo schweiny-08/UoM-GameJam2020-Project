@@ -30,15 +30,27 @@ public class EnemyShoot : MonoBehaviour
 
         float distance = Vector2.Distance(playerPos.position, transform.position);
 
-        if(distance < gameObject.GetComponent<LongRangePersonStats>().shootDistance && distance > gameObject.GetComponent<LongRangePersonStats>().runDistance){
-            if(shootDelayTime <= 0){
-                //Shoot
-                Instantiate(projectile, firePoint.position, Quaternion.identity);
+        if(gameObject.GetComponent<LongRangePersonStats>() != null){
 
-                shootDelayTime = startShootDelay;
-            }else{
-                shootDelayTime -= Time.deltaTime;
+            if((distance < gameObject.GetComponent<LongRangePersonStats>().shootDistance && distance > gameObject.GetComponent<LongRangePersonStats>().runDistance)){
+                if(shootDelayTime <= 0){
+                    //Shoot
+                    Instantiate(projectile, firePoint.position, Quaternion.identity);
+
+                    shootDelayTime = startShootDelay;
+                }else{
+                    shootDelayTime -= Time.deltaTime;
+                }
             }
+        }else if(gameObject.name == "CovidBoss"){
+            if(shootDelayTime <= 0){
+                    //Shoot
+                    Instantiate(projectile, firePoint.position, Quaternion.identity);
+
+                    shootDelayTime = startShootDelay;
+                }else{
+                    shootDelayTime -= Time.deltaTime;
+                }
         }
     }
 }

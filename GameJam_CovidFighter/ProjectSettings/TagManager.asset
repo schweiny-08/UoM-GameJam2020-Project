@@ -10,6 +10,7 @@ TagManager:
   - Wall
   - MeleeEnemy
   - Heal
+  - BossEnemy
   layers:
   - Default
   - TransparentFX

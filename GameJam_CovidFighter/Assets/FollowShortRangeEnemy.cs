@@ -14,6 +14,8 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
 
     public float scale = 0.3f;
 
+    private float safedistance;
+
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -30,8 +32,10 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector3.Distance(thisEnemy.transform.position, player.transform.position);
-        float safedistance = Vector3.Distance(thisEnemy.transform.position, safezone.transform.position);
-
+        
+        if(safezone != null){
+            safedistance = Vector3.Distance(thisEnemy.transform.position, safezone.transform.position);
+        }
         //is withing follow range then move towards player
         if (distance <= followDistance)
         {
@@ -42,9 +46,11 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
             animator.SetBool("PlayerSeen", false);
         }
 
-        if (safedistance <= safeDistance)
-        {
-            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
+        if(safezone != null){
+            if (safedistance <= safeDistance)
+            {
+                thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
+            }
         }
 
         //check if need to move left
