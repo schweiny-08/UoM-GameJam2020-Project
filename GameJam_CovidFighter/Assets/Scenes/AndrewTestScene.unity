@@ -16718,6 +16718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: SafeZone
       objectReference: {fileID: 0}
+    - target: {fileID: 7802525748207783447, guid: d4f5e404ed5a592488100c62bc81e3e7, type: 3}
+      propertyPath: m_TagString
+      value: SafeZone
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4f5e404ed5a592488100c62bc81e3e7, type: 3}
 --- !u!114 &1504249020 stripped
