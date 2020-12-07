@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public float speed = 10f;
+    public float speed;
 
     private Rigidbody2D rb;
     private SpriteRenderer sr;
@@ -25,6 +25,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //setting the speed at the start of a level to the speed 
+        speed = GameObject.Find("GameMaster").GetComponent<PlayerHealth>().playerSpeed;
+
         isDead = false;
         rb = GetComponent<Rigidbody2D>();
 

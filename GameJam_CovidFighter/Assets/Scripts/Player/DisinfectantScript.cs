@@ -5,9 +5,15 @@ using UnityEngine;
 public class DisinfectantScript : MonoBehaviour
 {
 
-    public int damage = 1;
+    public int damage;
 
-        void OnCollisionEnter2D(Collision2D col){
+        private void Start()
+    {
+        damage = GameObject.Find("GameMaster").GetComponent<PlayerHealth>().attackDamage;
+    }
+
+
+    void OnCollisionEnter2D(Collision2D col){
         if(col.gameObject.tag == "Wall")
             Destroy(gameObject);
         else if(col.gameObject.tag == "LongRangeEnemy"){
