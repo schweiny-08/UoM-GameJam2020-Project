@@ -8,8 +8,10 @@ public class Follow : StateMachineBehaviour
     private float shootDistance = 4f;
     private float followDistance = 6f;
     private float runDistance = 2.5f;
+    private float safeDistance = 2.5f;
     private GameObject player;
     private GameObject thisEnemy;
+    private GameObject safezone;
 
     public float scale = 0.3f;
 
@@ -18,6 +20,7 @@ public class Follow : StateMachineBehaviour
     {
         thisEnemy = animator.gameObject;
         player = GameObject.FindWithTag("Player");
+        safezone = GameObject.FindGameObjectWithTag("SafeZone");
 
         speed = thisEnemy.GetComponent<LongRangePersonStats>().speed;
         shootDistance = thisEnemy.GetComponent<LongRangePersonStats>().shootDistance;
@@ -29,6 +32,7 @@ public class Follow : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector3.Distance(thisEnemy.transform.position, player.transform.position);
+        float safedistance = Vector3.Distance(thisEnemy.transform.position, safezone.transform.position);
 
         //checking if it should run away or towards player
         //move away from player
@@ -54,6 +58,12 @@ public class Follow : StateMachineBehaviour
             animator.SetBool("Sneeze", true);
             animator.SetBool("Moving", false);
             animator.SetBool("MovingLeft", false);
+        }
+
+        //checking if they're too close to safe zone
+        if(safedistance <= safeDistance)
+        {
+            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
         }
 
         //check if need to move left

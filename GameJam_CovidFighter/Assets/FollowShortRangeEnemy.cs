@@ -7,8 +7,10 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
 
     private float speed;
     private float followDistance = 6f;
+    private float safeDistance = 2.5f;
     private GameObject player;
     private GameObject thisEnemy;
+    private GameObject safezone;
 
     public float scale = 0.3f;
 
@@ -18,6 +20,7 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
     {
         thisEnemy = animator.gameObject;
         player = GameObject.FindWithTag("Player");
+        safezone = GameObject.FindGameObjectWithTag("SafeZone");
 
         speed = thisEnemy.GetComponent<ShortRangePersonStats>().speed;
         followDistance = thisEnemy.GetComponent<ShortRangePersonStats>().followDistance;
@@ -27,6 +30,7 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector3.Distance(thisEnemy.transform.position, player.transform.position);
+        float safedistance = Vector3.Distance(thisEnemy.transform.position, safezone.transform.position);
 
         //is withing follow range then move towards player
         if (distance <= followDistance)
@@ -36,6 +40,11 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
         else
         {
             animator.SetBool("PlayerSeen", false);
+        }
+
+        if (safedistance <= safeDistance)
+        {
+            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
         }
 
         //check if need to move left
