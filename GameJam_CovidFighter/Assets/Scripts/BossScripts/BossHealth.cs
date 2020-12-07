@@ -1,15 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BossHealth : MonoBehaviour
 {
-    public int startHealth = 200;
-    public int health;
+    public float startHealth = 200;
+    public float health;
+    public Slider healthBar;
     // Start is called before the first frame update
     void Start()
     {
         health = startHealth;
+        healthBar.value = health / startHealth;
     }
 
     // Update is called once per frame
@@ -23,5 +26,8 @@ public class BossHealth : MonoBehaviour
     public void TakeDamage(int damage){
         health -= damage;
         Debug.Log(health);
+
+        //updates the health bar
+        healthBar.value = health / startHealth;
     }
 }

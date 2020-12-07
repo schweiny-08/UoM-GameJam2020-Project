@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossPhaseController : MonoBehaviour
 {
-    private int maxBossHealth, bossHealth;
+    private float maxBossHealth, bossHealth;
 
     public GameObject meleeEnemies;
 
