@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11f96c7d443485a4f9827294c3bcba28, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 7
+  maxHealth: 2
   currentHealth: 0
   timeLimit: 30
   lowhealth: 0
@@ -62,14 +62,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   masks:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 9150793125963143421, guid: 5312a3cafc8bd5e49a32bbf05a8e0066, type: 3}
+  - {fileID: 8615513201624536639, guid: 4864e5a1d17df904497750d89d18f54c, type: 3}
+  - {fileID: 1628857195183341243, guid: 21da2dddc9856de4b89998f0504675ce, type: 3}
+  - {fileID: 6643633731750458494, guid: be98f17b7ab10914eb289c8add5c36e6, type: 3}
+  - {fileID: 453010827789544975, guid: aa9a418d11bd2d647b796adfc8262f6c, type: 3}
+  - {fileID: 5096781316463630837, guid: 0f9dac67bb4131b41a4bf58097248ff3, type: 3}
+  - {fileID: 4025436973050330075, guid: 76f7551ba0732bd4f90549457e8cc174, type: 3}
+  - {fileID: 6816658777131619038, guid: 0debf3534062af646b48cd7398ade3f3, type: 3}
+  - {fileID: 1655335349282793375, guid: 392dc8866fa97b44aa99bd9383073db0, type: 3}
+  - {fileID: 7244604154265366762, guid: 7a19ee6c0db139243a80ff2dd491e646, type: 3}
   ph: {fileID: 0}
+  countdown: {fileID: 8468258264439316779, guid: df417723e916e06459d244a65f20faa6, type: 3}
+  levelCounter: {fileID: 3531025362925997770, guid: d2bed38318878b442b938775cf03155e, type: 3}
+  unifectedCounter: 0
+  uninfectedGoal: 10

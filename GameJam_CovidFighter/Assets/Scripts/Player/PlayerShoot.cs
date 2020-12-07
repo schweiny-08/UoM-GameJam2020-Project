@@ -9,6 +9,10 @@ public class PlayerShoot : MonoBehaviour
     public GameObject projectile;
     public float projectileSpeed = 10f;
 
+    //public bool isQuarantine;
+
+
+
     //GameObject drop;
     // Start is called before the first frame update
     void Start()
@@ -19,7 +23,8 @@ public class PlayerShoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Mouse0)){
+
+        if(Input.GetKeyDown(KeyCode.Mouse0) && !GameObject.Find("GameMaster").GetComponent<PlayerHealth>().lowhealth){
 
             //Creates correct rotation of drop
             Vector2 dropDirection = Camera.main.ScreenToWorldPoint(Input.mousePosition)- transform.position;

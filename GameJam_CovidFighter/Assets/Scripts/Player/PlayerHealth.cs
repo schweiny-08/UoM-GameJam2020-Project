@@ -12,11 +12,15 @@ public class PlayerHealth : MonoBehaviour
     public bool lowhealth = false;
     public float timeTaken;
 
+    private GUI gui;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
         timeTaken = 0;
+
+        gui = GetComponent<GUI>();
     }
 
     private void Update()
@@ -24,10 +28,15 @@ public class PlayerHealth : MonoBehaviour
         if(lowhealth)
         {
             timeTaken += Time.deltaTime;
+            gui.SetCounter((int)timeTaken);
+
+
 
             if(timeTaken >= timeLimit)
             {
-                SceneManager.LoadScene("CurrentScene");
+                StartCoroutine(InfectedPlayer());
+                //Load current scene
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }
     }
@@ -38,7 +47,7 @@ public class PlayerHealth : MonoBehaviour
 
         if(currentHealth <= 0)
         {
-            //lowhealth = true;
+            lowhealth = true;
             Debug.Log("VERY LOW HEALTH. RETURN TO SAFE ZONE WITHIN " + timeLimit + " SECONDS");
 
         }
@@ -60,5 +69,13 @@ public class PlayerHealth : MonoBehaviour
     {
         maxHealth = newMaxhealth;
         currentHealth = maxHealth;
+    }
+
+    IEnumerator InfectedPlayer(){
+
+        GameObject.FindWithTag("Player").GetComponent<SpriteRenderer>().color = Color.green;
+        GameObject.FindWithTag("Player").GetComponent<PlayerMovement>().enabled = false;
+
+        yield return new WaitForSeconds(4f);
     }
 }
