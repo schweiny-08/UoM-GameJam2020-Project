@@ -6354,6 +6354,10 @@ PrefabInstance:
       propertyPath: masks.Array.data[9]
       value: 
       objectReference: {fileID: 77425912}
+    - target: {fileID: 3820391605751937686, guid: f75cbf5eb4317a840bd5081b37917b5b, type: 3}
+      propertyPath: bossSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 74bb010d99a5522449058193f6bf1ad8, type: 3}
     - target: {fileID: 3820391605751937687, guid: f75cbf5eb4317a840bd5081b37917b5b, type: 3}
       propertyPath: m_Name
       value: CanvasSetter
