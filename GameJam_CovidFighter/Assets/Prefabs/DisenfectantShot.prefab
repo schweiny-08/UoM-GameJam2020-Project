@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 1
+  popParticles: {fileID: 2351435057744620672, guid: e57c30549c2df454bb9713d05bb3750b, type: 3}

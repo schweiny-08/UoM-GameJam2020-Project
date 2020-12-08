@@ -227,6 +227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3500887025125591705, guid: bef41f09cb0cc7742990ec6e83fc6616, type: 3}
+      propertyPath: m_UsedByComposite
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3500887025125591707, guid: bef41f09cb0cc7742990ec6e83fc6616, type: 3}
       propertyPath: m_Tiles.Array.size
       value: 483
@@ -13421,6 +13425,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &809432944 stripped
