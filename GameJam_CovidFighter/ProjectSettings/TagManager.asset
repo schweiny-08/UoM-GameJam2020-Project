@@ -11,8 +11,8 @@ TagManager:
   - MeleeEnemy
   - Heal
   - BossEnemy
-  - Barrier
   - UninfectedPerson
+  - Barrier
   layers:
   - Default
   - TransparentFX
