@@ -34,6 +34,8 @@ public class DisinfectantScript : MonoBehaviour
 
             col.gameObject.GetComponent<BossHealth>().TakeDamage(damage);
             Destroy(gameObject);
+        }else if(col.gameObject.tag == "Barrier"){
+            Destroy(gameObject);
         }
      }
 }
