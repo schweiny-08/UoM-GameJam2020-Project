@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: snowroad_0
+  m_Name: snowroad
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: -7331256420318085809, guid: ec5424a324e7a5b4d80924ca6be57ab3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ec5424a324e7a5b4d80924ca6be57ab3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

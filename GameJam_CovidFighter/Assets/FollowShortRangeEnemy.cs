@@ -7,7 +7,7 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
 
     private float speed;
     private float followDistance = 6f;
-    private float safeDistance = 2.5f;
+    private float safeDistance = 6f;
     private GameObject player;
     private GameObject thisEnemy;
     private GameObject safezone;
