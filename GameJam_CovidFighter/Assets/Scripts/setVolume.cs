@@ -11,7 +11,7 @@ public class setVolume : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        audioSourceToEffect = GameObject.Find("GameMaster").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +22,6 @@ public class setVolume : MonoBehaviour
 
     public void setVolAccSlider()
     {
-        audioSourceToEffect.volume = this.GetComponent<Slider>().value;
+        audioSourceToEffect.volume = this.GetComponentInChildren<Slider>().value;
     }
 }
