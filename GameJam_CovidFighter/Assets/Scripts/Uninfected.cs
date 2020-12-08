@@ -26,7 +26,12 @@ public class Uninfected : MonoBehaviour
     {
         if (!safe)
         {
-            uninfected.transform.position = Vector2.MoveTowards(uninfected.transform.position, player.transform.position, speed * Time.deltaTime);
+            float distance = Vector3.Distance(uninfected.transform.position, player.transform.position);
+            if (distance > 1)
+            {
+                uninfected.transform.position = Vector2.MoveTowards(uninfected.transform.position, player.transform.position, speed * Time.deltaTime);
+            }
+            
         }
         
     }

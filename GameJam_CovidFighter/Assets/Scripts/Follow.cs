@@ -8,7 +8,7 @@ public class Follow : StateMachineBehaviour
     private float shootDistance = 4f;
     private float followDistance = 6f;
     private float runDistance = 2.5f;
-    private float safeDistance = 2.5f;
+    private float safeDistance = 6f;
     private GameObject player;
     private GameObject thisEnemy;
     private GameObject safezone;
