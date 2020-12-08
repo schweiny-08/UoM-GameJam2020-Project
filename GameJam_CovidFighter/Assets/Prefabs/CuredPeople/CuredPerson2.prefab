@@ -4886,7 +4886,7 @@ GameObject:
   - component: {fileID: 6287935227305636762}
   m_Layer: 14
   m_Name: CuredPerson2
-  m_TagString: Untagged
+  m_TagString: UninfectedPerson
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5036,3 +5036,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyAfterTime: 3
+  infectedPerson: {fileID: 1896668782631520896, guid: 4cae1905887322f4ab538f5efeaadd24, type: 3}

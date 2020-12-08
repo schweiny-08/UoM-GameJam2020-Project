@@ -69,6 +69,8 @@ public class ShortRangePersonStats : MonoBehaviour
             playerHealth.OnDamageTaken(damage);
 
             Debug.Log("PLAYER HIT");
+        }else if(collision.gameObject.tag == "UninfectedPerson"){
+            collision.gameObject.GetComponent<curedPersonScript>().SpawnInfected();
         }
     }
 

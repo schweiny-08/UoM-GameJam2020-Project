@@ -6,6 +6,8 @@ public class curedPersonScript : MonoBehaviour
 {
     public float destroyAfterTime = 4f;
 
+    public GameObject infectedPerson;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -42,6 +44,11 @@ public class curedPersonScript : MonoBehaviour
     IEnumerator DestroyAfter(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
+        Destroy(gameObject);
+    }
+
+    public void SpawnInfected(){
+        Instantiate(infectedPerson, transform.position, Quaternion.identity);
         Destroy(gameObject);
     }
 }
