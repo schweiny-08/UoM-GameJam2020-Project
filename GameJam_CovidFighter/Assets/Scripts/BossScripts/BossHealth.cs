@@ -31,8 +31,8 @@ public class BossHealth : MonoBehaviour
 
          if(health <= 0){
             //Boss Dies
-            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-            GameObject.Find("GameMaster").GetComponent<GameMaster>().ToNextLevel();
+            SceneManager.LoadScene("WinScreen");
+            //GameObject.Find("GameMaster").GetComponent<GameMaster>().ToNextLevel();
         }
 
         //updates the health bar
