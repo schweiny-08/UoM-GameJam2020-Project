@@ -30,7 +30,8 @@ public class UpgradeSystem : MonoBehaviour
         {
             upgradeSelected = true;
             playerStats.maxHealth++;
-            StartCoroutine(GoToScene(sceneTransistionTime));
+            //StartCoroutine(GoToScene(sceneTransistionTime));
+            GameObject.Find("GameMaster").GetComponent<GameMaster>().ToNextLevel();
         }
 
     }
@@ -41,7 +42,8 @@ public class UpgradeSystem : MonoBehaviour
         {
             upgradeSelected = true;
             playerStats.playerSpeed = playerStats.playerSpeed + 2; //Change to a speed increase
-            StartCoroutine(GoToScene(sceneTransistionTime));
+            //StartCoroutine(GoToScene(sceneTransistionTime));
+            GameObject.Find("GameMaster").GetComponent<GameMaster>().ToNextLevel();
         }
     }
 
@@ -51,17 +53,15 @@ public class UpgradeSystem : MonoBehaviour
         {
             upgradeSelected = true;
             playerStats.attackDamage++; //Change to an attack power increase
-            StartCoroutine(GoToScene(sceneTransistionTime));
+            //StartCoroutine(GoToScene(sceneTransistionTime));
+            GameObject.Find("GameMaster").GetComponent<GameMaster>().ToNextLevel();
         }
     }
 
     //loads the scene after the given time
-    IEnumerator GoToScene(float waitTime)
-    {
-
-        yield return new WaitForSeconds(waitTime);
-
-        SceneManager.LoadScene(sceneToLoad);
-
-    }
+    // IEnumerator GoToScene(float waitTime)
+    // {
+    //     yield return new WaitForSeconds(waitTime);
+    //     SceneManager.LoadScene(sceneToLoad);
+    // }
 }
