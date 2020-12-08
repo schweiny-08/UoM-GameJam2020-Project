@@ -15,6 +15,8 @@ public class GUI : MonoBehaviour
 
     public int unifectedCounter = 0, uninfectedGoal = 10;
     // Start is called before the first frame update
+
+
     void Start()
     {
         ph = GetComponent<PlayerHealth>();

@@ -15,7 +15,7 @@ public class PlayerQuarantine : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D col){
-        if(col.gameObject.tag == "Player"){
+        if(col.gameObject.tag == "Player" && GameObject.Find("GameMaster").GetComponent<PlayerHealth>().lowhealth){
             //playerHealth.currentHealth = playerHealth.maxHealth;
             //playerHealth.lowhealth = false;
             //playerHealth
