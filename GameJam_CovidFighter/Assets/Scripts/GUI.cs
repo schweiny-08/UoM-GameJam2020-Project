@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using UnityEngine.SceneManagement;
 
 public class GUI : MonoBehaviour
 {
@@ -67,7 +68,8 @@ public class GUI : MonoBehaviour
 
     IEnumerator UninfectedCounter(){
 
-        levelCounter.text = "People to disinfect: " + unifectedCounter + "/" + uninfectedGoal;
+        if(SceneManager.GetActiveScene().name != "BossScene")
+            levelCounter.text = "People to disinfect: " + unifectedCounter + "/" + uninfectedGoal;
 
         yield return new WaitForSeconds(.5f);
     }
