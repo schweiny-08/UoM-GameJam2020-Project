@@ -6113,6 +6113,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 794544402973123204, guid: 7783cee22ed11f541964ff1c89d9e599, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 3036a7b20f1bf634bb70b155c2ea2e69, type: 3}
     - target: {fileID: 8980771070464132548, guid: 7783cee22ed11f541964ff1c89d9e599, type: 3}
       propertyPath: m_Name
       value: PlayerCharacter
