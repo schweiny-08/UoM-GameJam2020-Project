@@ -23,7 +23,7 @@ public class GameMaster : MonoBehaviour
         if(gui == null)
             gui = GetComponent<GUI>();
         
-        if(gui.unifectedCounter >= gui.uninfectedGoal && SceneManager.GetActiveScene().name != "BossScene" && SceneManager.GetActiveScene().name != "UpgradeSystem"){
+        if(gui.unifectedCounter >= gui.uninfectedGoal && SceneManager.GetActiveScene().name != "BossScene" && SceneManager.GetActiveScene().name != "UpgradeSystem" &&SceneManager.GetActiveScene().name != "WinScreen"){
             ToUpgradeScene();
         }
     }   

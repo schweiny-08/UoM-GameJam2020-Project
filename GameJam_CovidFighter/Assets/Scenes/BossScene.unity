@@ -188,7 +188,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1433848652494269818, guid: 70abd24c856a3b942b47bb2a18c72f47, type: 3}
       propertyPath: attackDamage
-      value: 1
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 1433848652494269819, guid: 70abd24c856a3b942b47bb2a18c72f47, type: 3}
       propertyPath: m_LocalPosition.x
@@ -531,7 +531,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 872666053}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -6354,6 +6354,10 @@ PrefabInstance:
       propertyPath: masks.Array.data[9]
       value: 
       objectReference: {fileID: 77425912}
+    - target: {fileID: 3820391605751937686, guid: f75cbf5eb4317a840bd5081b37917b5b, type: 3}
+      propertyPath: bossSong
+      value: 
+      objectReference: {fileID: 8300000, guid: 74bb010d99a5522449058193f6bf1ad8, type: 3}
     - target: {fileID: 3820391605751937687, guid: f75cbf5eb4317a840bd5081b37917b5b, type: 3}
       propertyPath: m_Name
       value: CanvasSetter
@@ -10260,7 +10264,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 872666053}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
