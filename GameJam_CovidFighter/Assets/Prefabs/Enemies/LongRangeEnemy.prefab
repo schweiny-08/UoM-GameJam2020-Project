@@ -469,7 +469,7 @@ MonoBehaviour:
   shootDistance: 4
   followDistance: 6
   runDistance: 2
-  health: 3
+  health: 6
   curedPersonPrefabVarient: {fileID: 2849204602467440589, guid: cd66ab9df6b1130449fbc166b442ac6e, type: 3}
   healthSlider: {fileID: 3666745308016856155}
 --- !u!114 &1500576613

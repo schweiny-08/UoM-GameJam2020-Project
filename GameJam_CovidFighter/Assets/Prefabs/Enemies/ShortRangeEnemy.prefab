@@ -5113,7 +5113,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   followDistance: 10
-  health: 3
+  health: 6
   attackCooldown: 2
   curedPersonPrefabVarient: {fileID: 4311207341918616135, guid: 46d154acbf3bd104faaf9750206772db, type: 3}
   healthSlider: {fileID: 5330879056843685731}
