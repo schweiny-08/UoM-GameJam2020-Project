@@ -35,9 +35,11 @@ public class GUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine(CheckPlayerHealth());
+        if(SceneManager.GetActiveScene().name != "MainMenu" && SceneManager.GetActiveScene().name != "UpgradeSystem"){
+            StartCoroutine(CheckPlayerHealth());
 
-        StartCoroutine(UninfectedCounter());
+            StartCoroutine(UninfectedCounter());
+        }
     }
 
     IEnumerator CheckPlayerHealth(){
