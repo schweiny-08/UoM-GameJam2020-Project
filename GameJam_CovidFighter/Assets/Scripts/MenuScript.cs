@@ -28,6 +28,11 @@ public class MenuScript : MonoBehaviour
     //Takes User To A Specific Scene
     public void goToScene()
     {
+        if (SceneManager.GetActiveScene().name == "WinScreen")
+        {
+            Destroy(GameObject.Find("GameMaster"));
+        }
+
         StartCoroutine(LoadSceneAfter(waitTime));
     }
 

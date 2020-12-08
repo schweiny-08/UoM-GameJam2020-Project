@@ -46,6 +46,7 @@ public class PauseMenuScript : MonoBehaviour
     public void exitToScene()
     {
         SceneManager.LoadScene(ExitSceneToGoTo);
+        Destroy(GameObject.Find("GameMaster"));
     }
 
 }

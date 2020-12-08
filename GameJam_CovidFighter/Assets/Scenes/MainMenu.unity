@@ -177,6 +177,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   audioSourceToEffect: {fileID: 0}
+  po: 0
 --- !u!114 &65504270
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3058,7 +3059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d8b5bf275f1f154fb48190645125da3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SceneToGoTo: 
+  SceneToGoTo: Level1
   waitTime: 0.4
   optionsMenu: {fileID: 330388243}
 --- !u!1 &1886543753
