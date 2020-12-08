@@ -45,6 +45,8 @@ public class CoughProjectile : MonoBehaviour
             Destroy(gameObject); //Destroying the drop before enemy is destroyed (drop wont destroy if done after)
         }else if(col.gameObject.tag == "Barrier"){
             Destroy(gameObject);
+        }else if(col.gameObject.tag == "UninfectedPerson"){
+            col.gameObject.GetComponent<curedPersonScript>().SpawnInfected();
         }
     }
 }
