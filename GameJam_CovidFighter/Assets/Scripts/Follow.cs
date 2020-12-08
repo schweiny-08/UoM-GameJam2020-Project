@@ -65,10 +65,10 @@ public class Follow : StateMachineBehaviour
         }
 
         //checking if they're too close to safe zone
-        if(safedistance <= safeDistance && safezone!=null)
-        {
-            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
-        }
+        // if(safedistance <= safeDistance && safezone!=null)
+        // {
+        //     thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
+        // }
 
         //check if need to move left
         if (thisEnemy.transform.position.x > player.transform.position.x)

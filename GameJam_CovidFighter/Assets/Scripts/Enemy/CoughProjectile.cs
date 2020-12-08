@@ -33,8 +33,8 @@ public class CoughProjectile : MonoBehaviour
             Debug.Log("PLAYER HIT");
             playerHealth.OnDamageTaken(damage);
             Destroy(gameObject); //Destroying the drop before enemy is destroyed (drop wont destroy if done after)
-
-            //Hit Player
+        }else if(col.gameObject.tag == "Barrier"){
+            Destroy(gameObject);
         }
     }
 }

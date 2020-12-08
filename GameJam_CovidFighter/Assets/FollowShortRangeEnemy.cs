@@ -49,7 +49,7 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
         if(safezone != null){
             if (safedistance <= safeDistance)
             {
-                thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
+                // thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
             }
         }
 
