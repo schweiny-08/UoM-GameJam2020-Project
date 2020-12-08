@@ -58,7 +58,7 @@ public class LongRangePersonStats : MonoBehaviour
     public void CharacterDamage(int damageTaken){
         health -= damageTaken;
         healthSlider.value = health / maxhealth;
-        if (health == 0)
+        if (health <= 0)
         {
             //diabling sprite and collisions now and waiting 2 seconds to destroy object to give time to play death effects/ sound effects
             this.gameObject.GetComponent<SpriteRenderer>().enabled = false;

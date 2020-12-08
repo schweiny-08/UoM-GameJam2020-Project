@@ -13,6 +13,8 @@ public class Follow : StateMachineBehaviour
     private GameObject thisEnemy;
     private GameObject safezone;
 
+    private float safedistance;
+
     public float scale = 0.3f;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -32,8 +34,10 @@ public class Follow : StateMachineBehaviour
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         float distance = Vector3.Distance(thisEnemy.transform.position, player.transform.position);
-        float safedistance = Vector3.Distance(thisEnemy.transform.position, safezone.transform.position);
 
+        if(safezone != null){
+        safedistance = Vector3.Distance(thisEnemy.transform.position, safezone.transform.position);
+        }
         //checking if it should run away or towards player
         //move away from player
         if (distance <= runDistance)
@@ -61,7 +65,7 @@ public class Follow : StateMachineBehaviour
         }
 
         //checking if they're too close to safe zone
-        if(safedistance <= safeDistance)
+        if(safedistance <= safeDistance && safezone!=null)
         {
             thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
         }
