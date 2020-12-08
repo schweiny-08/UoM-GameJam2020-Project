@@ -19,15 +19,21 @@ public class BossHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0){
-            //Boss Dies
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
-        }
+        // if(health <= 0){
+        //     //Boss Dies
+        //     SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+        // }
     }
 
     public void TakeDamage(int damage){
         health -= damage;
         Debug.Log(health);
+
+         if(health <= 0){
+            //Boss Dies
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+            GameObject.Find("GameMaster").GetComponent<GameMaster>().ToNextLevel();
+        }
 
         //updates the health bar
         healthBar.value = health / startHealth;
