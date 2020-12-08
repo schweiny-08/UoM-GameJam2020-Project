@@ -42,12 +42,22 @@ public class Follow : StateMachineBehaviour
         //move away from player
         if (distance <= runDistance)
         {
-            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, -1 * speed * Time.deltaTime);
+            //thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, -1 * speed * Time.deltaTime);
+
+            Vector3 move = player.transform.position - thisEnemy.transform.position;
+            Rigidbody2D rigidbody = thisEnemy.GetComponent<Rigidbody2D>();
+            rigidbody.MovePosition(rigidbody.transform.position + -move * Time.deltaTime * speed*4);
+
         }
         //move towards player
         else
         {
-            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, speed * Time.deltaTime);
+            //thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, speed * Time.deltaTime);
+
+            Vector3 move = player.transform.position - thisEnemy.transform.position;
+            Rigidbody2D rigidbody = thisEnemy.GetComponent<Rigidbody2D>();
+            rigidbody.MovePosition(rigidbody.transform.position + move * Time.deltaTime * speed);
+
             animator.SetBool("RunAway", false);
         }
 
@@ -65,11 +75,11 @@ public class Follow : StateMachineBehaviour
         }
 
         //checking if they're too close to safe zone
-        // if(safedistance <= safeDistance && safezone!=null)
-        // {
-        //     thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
-        // }
-
+        //if(safedistance <= safeDistance && safezone!=null)
+        //{
+        //    thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
+        //}
+        
         //check if need to move left
         if (thisEnemy.transform.position.x > player.transform.position.x)
         {

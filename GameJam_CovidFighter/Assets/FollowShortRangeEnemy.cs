@@ -39,7 +39,11 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
         //is withing follow range then move towards player
         if (distance <= followDistance)
         {
-            thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, speed * Time.deltaTime);
+            //thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, player.transform.position, speed * Time.deltaTime);
+            Vector3 move = player.transform.position - thisEnemy.transform.position;
+            Rigidbody2D rigidbody = thisEnemy.GetComponent<Rigidbody2D>();
+            rigidbody.MovePosition(rigidbody.transform.position + move * Time.deltaTime *speed *2);
+
         }
         else
         {
@@ -49,7 +53,7 @@ public class FollowShortRangeEnemy : StateMachineBehaviour
         if(safezone != null){
             if (safedistance <= safeDistance)
             {
-                // thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
+                //thisEnemy.transform.position = Vector2.MoveTowards(thisEnemy.transform.position, safezone.transform.position, -1 * speed * Time.deltaTime);
             }
         }
 
